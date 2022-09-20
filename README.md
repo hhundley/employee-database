@@ -4,6 +4,9 @@
   
   ## Description
   Uses sql to manage and dynamically update an employee database
+
+  ## Screen Recording
+  [https://drive.google.com/file/d/1cU9MGse-xZxB_4Y1EU86-WU--s-gxGSp/view](https://drive.google.com/file/d/1cU9MGse-xZxB_4Y1EU86-WU--s-gxGSp/view)
   
   ## Table of Contents
   * [Installation](#installation)

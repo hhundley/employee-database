@@ -29,14 +29,6 @@ const departmentQuestions = [
     },
 ];
 
-const employeeRoleQuestions = [
-    {
-        type: "input",
-        message: "Enter new role",
-        name: "role_id",
-    },
-];
-
 // Creating initial function for the app
 function initPrompt() {
     inquirer.prompt(initQuestions)
@@ -82,6 +74,7 @@ function initPrompt() {
     })
 }
 
+// functions for adds and updates
 function departmentPrompt() {
    inquirer.prompt(departmentQuestions)
    .then((answers) => {
@@ -274,4 +267,5 @@ function updateRolePrompt() {
     })
 }
 
+// initializing the app
 initPrompt();
