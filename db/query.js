@@ -4,17 +4,17 @@ class Query {
   constructor(connection){
     this.connection = connection;
   }
-  addDepartment(){
-    return this.connection.promise().query('INSERT INTO department (department_name) VALUES (?)');
+  addDepartment(department){
+    return this.connection.promise().query('INSERT INTO department (department_name) VALUES (?)',department);
   }
-  addRole(){
-    return this.connection.promise().query('INSERT INTO role (title,salary,department_id) VALUES (?,?,?)');
+  addRole(roleData){
+    return this.connection.promise().query('INSERT INTO role (title,salary,department_id) VALUES (?,?,?)',roleData);
   }
-  addEmployee(){
-    return this.connection.promise().query('INSERT INTO employee (first_name,last_name,role_id,manager_id) VALUES (?,?,?,?)');
+  addEmployee(employeeData){
+    return this.connection.promise().query('INSERT INTO employee (first_name,last_name,role_id,manager_id) VALUES (?,?,?,?)',employeeData);
   }
-  updateRole(){
-    return this.connection.promise().query('UPDATE employee SET role_id = ? WHERE id = ?');
+  updateRole(newRoleData){
+    return this.connection.promise().query('UPDATE employee SET role_id = ? WHERE id = ?', newRoleData);
   }
   viewDepartments(){
     return this.connection.promise().query('SELECT * FROM department');
